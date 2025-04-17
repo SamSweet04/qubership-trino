@@ -16,7 +16,7 @@ The following sections are described in this chapter:
 Trino can execute SQL queries against several data storages. Trino connectors should be configured for each of them.  
 The full list of possible connectors can be found at [https://trino.io/docs/current/connector.html](https://trino.io/docs/current/connector.html).
 
-Example connectors in CMBD config:
+The example connectors in CMBD config are specified in the below sub-sections.
 
 ### PostgresSQL
 
@@ -33,7 +33,7 @@ catalogs:
 
 ### Hive
 
-Following is an example of Hive that uses S3 storage, connector configuration that should be added to Trino's deployment parameters:
+The following is an example of Hive that uses S3 storage, connector configuration that should be added to Trino's deployment parameters:
 
 ```yaml
 catalogs:
@@ -118,18 +118,18 @@ trino --server <your.ingress.address> --insecure --user <username> --password
 
 To use DBeaver as a Trino client, the following configuration should be done:
 
-* Download and install DBeaver.
-* Open DBeaver. 
-* Navigate to File -> New.
-* Select DBeaver as a wizard -> Database Connection.
-* Select Trino in the list of possible DB.
-* Enter the Trino connection parameters.  
-  ![alt text](/docs/public/images/DBeaver-Trino-Connection.png "DBeaver Trino Connection")
-  * JDBC URL: <your.ingress.address>
-  * Port: Navigate to K8s and open the Trino service. The port is specified at `spec.ports.nodePort`.
-  * Username and password are specified during the deployment. By default, `admin` is the username and the password is blank.
+1. Download and install DBeaver.
+2. Open DBeaver. 
+3. Navigate to **File** > **New**.
+4. Select **DBeaver** as a wizard > **Database Connection**.
+5. Select **Trino** in the list of possible databases.
+6. Enter the Trino connection parameters.
+    * JDBC URL: <your.ingress.address>
+    * Port: Navigate to K8s and open the Trino service. The port is specified at `spec.ports.nodePort`.
+    * Username and password are specified during the deployment. By default, `admin` is the username and the password is blank.
+      
+![DBeaver Trino Connection](/docs/public/images/DBeaver-Trino-Connection.png)
 
 ### DBeaver passwordauth
 
-To use the password authentication in Dbeaver, refer to [https://techjogging.com/connect-dbeaver-presto-https-protocol.html](https://techjogging.com/connect-dbeaver-presto-https-protocol.html).
-
+To use the password authentication in Dbeaver, refer to the _Official Documentation_ at [https://techjogging.com/connect-dbeaver-presto-https-protocol.html](https://techjogging.com/connect-dbeaver-presto-https-protocol.html).
