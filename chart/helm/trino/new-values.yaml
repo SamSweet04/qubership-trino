@@ -1,0 +1,2 @@
+image:
+  dockerImage: ghcr.io/netcracker/qubership-trino:main
