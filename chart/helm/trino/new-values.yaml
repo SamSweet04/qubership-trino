@@ -1,2 +1,2 @@
 image:
-  dockerImage: ghcr.io/netcracker/qubership-trino:main
+  dockerImage: ghcr.io/netcracker/qubership-trino:51.51.50
